@@ -23,6 +23,14 @@ prueba sobre el model, tanto manual como automática.
 
 
 ##########################################
+ DESCARGAR MODELO NEURONAL ENTRENADO
+##########################################
+
+https://drive.google.com/file/d/1Xbd9XNuF9VIB_mp9fQP6XJwwWXSPoC7b/view?usp=sharing
+
+
+
+##########################################
  ESTRUCTURA DEL DIRECTORIO
 ##########################################
 
@@ -42,8 +50,8 @@ Todos los contenidos del proyecto se almacenan de la siguiente forma:
 A continuación se describe la funcinalidad de cada fichero del proyecto:
 	> "./data/train.csv": conjunto de datos de trabajo.
 	> "./models/tfidf_models/*.joblib": model de TF-IDF entrenado.
-	> "./models/xlm_roberta_models/*.pt": mejor configuración de pesos encontrada.
-	> "./models/xlm_roberta_models/*tokenizer.json": definición del tokenizador.
+	> "./models/xlm_roberta_models/best_model.pt": mejor configuración de pesos encontrada.
+	> "./models/xlm_roberta_models/tokenizer.json": definición del tokenizador.
 	> "./modelss/xlm_roberta_models/tokenizer_config.json": configuración del tokenizador.
 	> "abuse_classifier.py": wrapper para encapsular el clasificardor de tipo de abuso.
 				 Permite utilizar cualquier de los dos modelos sin restrinciones.
@@ -60,9 +68,16 @@ A continuación se describe la funcinalidad de cada fichero del proyecto:
 				   comparación de sus rendimientos.
 	> "user_detector.py": programa dedicado a la detección de usuarios implicados en la comunicación
 			      mediante un sistema NER.
-	> "utils.py": fichero que contiene funciones varias esenciales para diversas partes del sistema (carga de dataset, visualización de datos, preprocesador, etc.).
+	> "utils.py": fichero que contiene funciones varias esenciales para diversas partes del sistema (carga
+		      de dataset, visualización de datos, preprocesador, etc.).
 	> "XLM_RoBERTa.py": implementación del modelo XLM-RoBERTa + fine-tunning.
 	
+
+Cabe destacar que el modelo entrenado de XLM-RoBERTa-base con fine-tuning no se encuentra dentro del repositorio
+de GitHub por las limitaciones en el tamaño de los ficheros. Se puede descargar de la siguiente dirección de
+Google Drive: https://drive.google.com/file/d/1Xbd9XNuF9VIB_mp9fQP6XJwwWXSPoC7b/view?usp=sharing
+
+El modelo debe guardarse en "./models/xlm_roberta_models/".
 
 ##########################################
  DEPENDENCIAS
